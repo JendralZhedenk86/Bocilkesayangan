@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Umnia 🎉</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+</head>
+<body data-page="1">
+
+<!-- Musik - Satu audio untuk semua page -->
+<audio id="music" loop>
+    <source src="Assets/audio/anugerah terindah.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Efek Hati -->
+<div class="hearts"></div>
+
+<!-- Page 1 -->
+<div class="page-container" id="page1">
+    <div class="card">
+        <div class="avatar">
+            <img src="assets/img/page1gif.gif" alt="avatar">
+        </div>
+
+        <h3 id="typing1" data-text="Hai, Sayangnya Acuuuu ✨" data-speed="80"></h3>
+
+        <div class="message">
+            <p><strong>Happy Birthday, Sayang 🎂</strong></p>
+            <p>Siih nambah tua aja nih bocil, hehe 😆</p>
+            <p>
+                Semoga panjang umur, sehat selalu,  
+                dan jangan bosen sama kakak yaa❤️
+            </p>
+        </div>
+
+        <button onclick="nextPage()">Lanjut 💌</button>
+    </div>
+</div>
+
+<!-- Page 2 -->
+<div class="page-container" id="page2" style="display: none;">
+    <div class="card">
+        <div class="avatar">
+            <img src="assets/img/page2gif.gif" alt="avatar">
+        </div>
+
+        <h3 id="typing2" data-text="Jangan pernah berubah, sebab..." data-speed="80"></h3>
+
+        <div class="message">
+            <p><strong>You are the best support system 💪</strong></p>
+            <p>
+                Terimakasih sudah selalu mendukung kakak,
+                menemani kakak dikala kakak suka maupun duka. Tolong kerjasamanya ya untuk tahun tahun berikutnya ❤️
+            </p>
+        </div>
+
+        <button onclick="nextPage()">Lanjut 💌</button>
+    </div>
+</div>
+
+<!-- Page 3 -->
+<div class="page-container" id="page3" style="display: none;">
+    <div class="card">
+        <div class="avatar">
+            <img src="assets/img/page4gif.gif" alt="avatar">
+        </div>
+
+        <h3 id="typing3" data-text="DOA✨"></h3>
+
+        <div class="message">
+            <p><strong>Teruntuk bocil kesayangan😆</strong></p>
+            <p>
+                Semoga selalu dilancarkan segala urusannya,
+                mengabulkan harapan baik adek, panjang umur, sehat selalu,
+                serta bahagia dunia akhirat. dan tidak lupa tetap jadi bocil yang
+                sholehah, ga gampang ngambek dan marah2, ga ngajak ribut mulu hehe 😆
+                dan yang kakak harapkan semoga allah menjadikan kita bagian dari rencana-Nya yang indah 🤲✨
+            </p>
+        </div>
+
+        <button onclick="nextPage()">Lanjut 💌</button>
+    </div>
+</div>
+
+<!-- Page 4 -->
+<div class="page-container" id="page4" style="display: none;">
+    <div class="card">
+        <h2>💌 Surat Kecil Untuk Kamu</h2>
+
+        <div class="message">
+            <p>
+                Di hari spesial ini, aku cuma mau bilang…  
+                makasih sudah jadi bagian terpenting dalam hidupku.
+            </p>
+
+            <p>
+                Semoga setiap langkah kamu selalu dimudahkan,  
+                setiap senyum kamu selalu tulus,  
+                dan semoga aku selalu ada di cerita kamu ❤️
+            </p>
+
+            <p><strong>Happy Birthday, Sayang 🎂</strong></p>
+        </div>
+
+        <button onclick="nextPage()">Lanjut 💌</button>
+    </div>
+</div>
+
+<!-- Page 5 -->
+<div class="page-container" id="page5" style="display: none;">
+    <div class="card">
+        <h2>📸 Kenangan Kita</h2>
+        <p class="subtitle">Beberapa momen kecil, tapi berarti besar ❤️</p>
+
+        <div class="gallery">
+            <div class="photo">
+                <img src="assets/img/kenangan1.jpeg" alt="Kenangan 1">
+                <span>Pertama kali foto bareng, kaku bangett hahaha😄</span>
+            </div>
+            <div class="photo">
+                <img src="assets/img/kenangan2.jpeg" alt="Kenangan 2">
+                <span>Ciee anakna sapa ria malu malu kucing 😌</span>
+            </div>
+            <div class="photo">
+                <img src="assets/img/kenangan3.jpeg" alt="Kenangan 3">
+                <span>Ciee salting kiwkiw🤍</span>
+            </div>
+            <div class="photo">
+                <img src="assets/img/kenangan4.jpeg" alt="Kenangan 4">
+                <span>Nompo jejen berkedok telasan 😭</span>
+            </div>
+        </div>
+
+        <button onclick="nextPage()">Kembali ke halaman awal💌</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

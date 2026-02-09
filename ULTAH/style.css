@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: url("assets/img/bg.jpg") no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+    transition: background-image 0.5s ease-in-out;
+}
+
+/* Overlay gelap biar teks kebaca */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: -1;
+}
+
+/* Background berbeda untuk tiap page */
+body[data-page="1"] {
+    background-image: url("assets/img/page1.jpeg");
+}
+
+body[data-page="2"] {
+    background-image: url("assets/img/page2.jpeg");
+}
+
+body[data-page="3"] {
+    background-image: url("assets/img/page3.jpeg");
+}
+
+body[data-page="4"] {
+    background-image: url("assets/img/page4.jpeg");
+}
+
+body[data-page="5"] {
+    background-image: url("assets/img/page5.jpeg");
+}
+
+/* Container untuk setiap page */
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 25px;
+    width: 320px;
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.avatar img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 2px solid #fff;
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
+h3 {
+    margin-bottom: 15px;
+    font-weight: 500;
+    min-height: 30px;
+}
+
+.message p {
+    font-size: 0.9em;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background: #ff6b81;
+    color: #fff;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff4757;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* ===== Efek Hati Jatuh ===== */
+.hearts {
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    pointer-events: none;
+}
+
+.hearts span {
+    position: fixed;
+    top: -10px;
+    font-size: 20px;
+    animation: fall linear infinite;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(120vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Gallery untuk page 5 */
+.subtitle {
+    font-size: 0.85em;
+    opacity: 0.9;
+    margin-bottom: 12px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 15px 0;
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+.photo {
+    background: rgba(255,255,255,0.12);
+    border-radius: 12px;
+    padding: 6px;
+}
+
+.photo img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.photo span {
+    display: block;
+    font-size: 0.7em;
+    margin-top: 5px;
+    opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .card {
+        width: 95%;
+        padding: 20px;
+    }
+    
+    .gallery {
+        max-height: 40vh;
+    }
+    
+    .photo img {
+        height: 80px;
+    }
+}
